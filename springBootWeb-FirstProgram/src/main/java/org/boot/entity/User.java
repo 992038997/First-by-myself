@@ -1,5 +1,5 @@
 package org.boot.entity;
-
+//hhhh
 public class User {
 	private String userName;
 	private String passWord;
