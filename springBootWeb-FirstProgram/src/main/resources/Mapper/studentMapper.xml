@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ <mapper namespace="org.boot.Mapper.StudentMapper">
+      <select id="queryUserByuserName" parameterType="String"  resultType="org.boot.entity.User">
+            select * from user where userName=#{userName}
+      </select>
+      
+      <delete id="deleteUserByuserName" parameterType="String">
+           delete from user where userName=#{userName} 
+      </delete>
+      
+      <update id="updateUserByuserName" parameterType="org.boot.entity.User">
+           update user set passWord=#{passWord} where userName=#{userName} 
+      </update>
+      
+      <insert id="insertUserByuserName" parameterType="org.boot.entity.User">
+            insert into user (userName,passWord)values(#{userName},#{passWord})
+      </insert>
+      
+ </mapper>
